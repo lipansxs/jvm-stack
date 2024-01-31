@@ -32,6 +32,7 @@ subprojects {
 
     if (project.name != "jvm-stack-platform" && project.subprojects.isEmpty()) {
         apply(plugin = "java")
+        apply(plugin = "maven-publish")
         apply(plugin = "io.freefair.lombok")
 
 
