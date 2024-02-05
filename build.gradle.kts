@@ -42,6 +42,21 @@ subprojects {
             extension.targetCompatibility = JavaVersion.VERSION_17
         }
 
+        plugins.withId("java") {
+            val extension = this@subprojects.extensions.getByType<PublishingExtension>()
+            extension.publications {
+                create<MavenPublication>("mavenJava") {
+                    from(components["java"])
+                }
+            }
+
+            extension.repositories {
+                maven {
+                    url = uri("file:///Users/lipan/repository")
+                }
+            }
+        }
+
         val implementation by configurations
         dependencies {
             implementation(platform(project(":jvm-stack-platform")))
