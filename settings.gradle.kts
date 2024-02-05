@@ -9,3 +9,6 @@ include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-pro
 findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-provider")?.name = "jvm-stack-cloud-alibaba-provider"
 include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-consumer")
 findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-consumer")?.name = "jvm-stack-cloud-alibaba-consumer"
+include("jvm-stack-framework")
+include("jvm-stack-framework:jvm-stack-springboot")
+findProject(":jvm-stack-framework:jvm-stack-springboot")?.name = "jvm-stack-springboot"
