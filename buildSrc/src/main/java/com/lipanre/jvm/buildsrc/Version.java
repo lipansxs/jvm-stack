@@ -16,7 +16,7 @@ public class Version {
     public static final String springCloudVersion = "2022.0.0";
 
     /**
-     * 定义使用spring-cloud-alibaba的稳步
+     * 定义使用spring-cloud-alibaba的版本
      */
     public static final String springCloudAlibabaVersion = "2022.0.0.0";
 
