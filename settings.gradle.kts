@@ -5,5 +5,7 @@ findProject(":jvm-stack-middleware:jvm-stack-redis")?.name = "jvm-stack-redis"
 include("jvm-stack-framework")
 include("jvm-stack-framework:jvm-stack-cloud-alibaba")
 findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba")?.name = "jvm-stack-cloud-alibaba"
-include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-service1")
-findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-service1")?.name = "jvm-stack-cloud-alibaba-service1"
+include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-provider")
+findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-provider")?.name = "jvm-stack-cloud-alibaba-provider"
+include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-consumer")
+findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-consumer")?.name = "jvm-stack-cloud-alibaba-consumer"
