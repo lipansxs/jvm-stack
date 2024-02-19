@@ -8,4 +8,9 @@ spring:
       server-addr: localhost:8848
       discovery:
         namespace: lipanre
-
+      config:
+        namespace: lipanre
+        file-extension: yml
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}

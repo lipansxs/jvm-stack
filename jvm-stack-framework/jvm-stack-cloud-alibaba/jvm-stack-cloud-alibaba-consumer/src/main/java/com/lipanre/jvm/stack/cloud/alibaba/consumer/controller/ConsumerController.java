@@ -2,6 +2,7 @@ package com.lipanre.jvm.stack.cloud.alibaba.consumer.controller;
 
 import com.lipanre.jvm.stack.cloud.alibaba.consumer.feign.ProviderFeignClient;
 import jakarta.annotation.Resource;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
