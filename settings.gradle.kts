@@ -12,3 +12,5 @@ findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibab
 include("jvm-stack-framework")
 include("jvm-stack-framework:jvm-stack-springboot")
 findProject(":jvm-stack-framework:jvm-stack-springboot")?.name = "jvm-stack-springboot"
+include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-gateway")
+findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-gateway")?.name = "jvm-stack-cloud-gateway"
