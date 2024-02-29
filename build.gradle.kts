@@ -1,5 +1,8 @@
 buildscript {
     repositories {
+        maven {
+            url = uri("file://D:/repository")
+        }
         mavenLocal()
         maven {
             setUrl("https://maven.aliyun.com/repository/public/")
@@ -52,7 +55,7 @@ subprojects {
 
             extension.repositories {
                 maven {
-                    url = uri("file:///Users/lipan/repository")
+                    url = uri("file://D:/repository")
                 }
             }
         }

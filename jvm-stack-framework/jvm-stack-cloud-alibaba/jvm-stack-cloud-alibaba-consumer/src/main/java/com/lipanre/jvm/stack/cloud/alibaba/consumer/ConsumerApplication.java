@@ -1,5 +1,6 @@
 package com.lipanre.jvm.stack.cloud.alibaba.consumer;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -11,6 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
+@MapperScan("com.lipanre.jvm.stack.cloud.alibaba.consumer.mapper")
 public class ConsumerApplication {
 
     public static void main(String[] args) {
