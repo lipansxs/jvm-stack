@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@FeignClient(name = "provider-service", path = "/stock", contextId = "StockFeignClient")
+@FeignClient(name = "provider-service", path = "/stock", contextId = "stockFeignClient")
 public interface StockFeignClient {
 
     @PostMapping("/desc/{id}")
