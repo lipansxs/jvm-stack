@@ -27,6 +27,10 @@ dependencies {
     api(platform("org.springframework.cloud:spring-cloud-dependencies:${Version.springCloudVersion}"))
     api(platform("com.alibaba.cloud:spring-cloud-alibaba-dependencies:${Version.springCloudAlibabaVersion}"))
     api("cn.hutool:hutool-bom:${ext.get("hutool.version")}")
+    api(platform("org.junit:junit-bom:${Version.junitBomVersion}"))
+    api("org.mapstruct:mapstruct-processor:${Version.mapStructVersion}")
+    api("org.mapstruct:mapstruct:${Version.mapStructVersion}")
+
 
     constraints {
         api("org.projectlombok:lombok:${ext.get("lombok.version")}")

@@ -20,4 +20,14 @@ public class Version {
      */
     public static final String springCloudAlibabaVersion = "2022.0.0.0";
 
+    /**
+     * junit版本
+     */
+    public static final String junitBomVersion = "5.9.1";
+
+    /**
+     * map-struct版本控制
+     */
+    public static final String mapStructVersion = "1.5.5.Final";
+
 }
