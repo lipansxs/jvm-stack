@@ -1,3 +1,8 @@
+plugins {
+    id("java")
+}
+
+
 buildscript {
     repositories {
         maven {
@@ -33,34 +38,16 @@ subprojects {
         mavenCentral()
     }
 
-    if (project.name != "jvm-stack-platform" && project.subprojects.isEmpty()) {
-        apply(plugin = "java")
+    if (!this.name.endsWith("platform")) {
         apply(plugin = "maven-publish")
         apply(plugin = "io.freefair.lombok")
+        apply(plugin = "java")
 
-
-        plugins.withId("java") {
-            val extension = this@subprojects.extensions.getByType<JavaPluginExtension>()
-            extension.sourceCompatibility = JavaVersion.VERSION_17
-            extension.targetCompatibility = JavaVersion.VERSION_17
+        java {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
         }
 
-        plugins.withId("java") {
-            val extension = this@subprojects.extensions.getByType<PublishingExtension>()
-            extension.publications {
-                create<MavenPublication>("mavenJava") {
-                    from(components["java"])
-                }
-            }
-
-            extension.repositories {
-                maven {
-                    url = uri("file://D:/repository")
-                }
-            }
-        }
-
-        val implementation by configurations
         dependencies {
             implementation(platform(project(":jvm-stack-platform")))
         }
