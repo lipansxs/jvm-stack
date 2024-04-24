@@ -50,6 +50,7 @@ subprojects {
 
         dependencies {
             implementation(platform(project(":jvm-stack-platform")))
+            annotationProcessor(platform(project(":jvm-stack-platform")))
         }
 
     }

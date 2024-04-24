@@ -20,16 +20,15 @@ dependencies {
         set("javax-servlet.version", "4.0.1")
         set("hutool.version", "5.8.26")
         set("mysql-connector.version", "8.0.31")
+        set("mapstruct.version", "1.5.5.Final")
     }
 
 
     api(platform("org.springframework.boot:spring-boot-dependencies:${Version.springBootVersion}"))
     api(platform("org.springframework.cloud:spring-cloud-dependencies:${Version.springCloudVersion}"))
     api(platform("com.alibaba.cloud:spring-cloud-alibaba-dependencies:${Version.springCloudAlibabaVersion}"))
-    api("cn.hutool:hutool-bom:${ext.get("hutool.version")}")
+    api(platform("cn.hutool:hutool-bom:${ext.get("hutool.version")}"))
     api(platform("org.junit:junit-bom:${Version.junitBomVersion}"))
-    api("org.mapstruct:mapstruct-processor:${Version.mapStructVersion}")
-    api("org.mapstruct:mapstruct:${Version.mapStructVersion}")
 
 
     constraints {
@@ -40,5 +39,8 @@ dependencies {
         api("io.jsonwebtoken:jjwt:${ext.get("jjwt.version")}")
         api("javax.servlet:javax.servlet-api:${ext.get("javax-servlet.version")}")
         api("mysql:mysql-connector-java:${ext.get("mysql-connector.version")}")
+        api("org.mapstruct:mapstruct-processor:${ext.get("mapstruct.version")}")
+        api("org.mapstruct:mapstruct:${ext.get("mapstruct.version")}")
+
     }
 }
