@@ -1,7 +1,3 @@
-plugins {
-    id("java")
-}
-
 
 buildscript {
     repositories {
@@ -38,16 +34,18 @@ subprojects {
         mavenCentral()
     }
 
-    if (!this.name.endsWith("platform")) {
+    if (!this.name.endsWith("platform") && project.subprojects.isEmpty()) {
         apply(plugin = "maven-publish")
         apply(plugin = "io.freefair.lombok")
         apply(plugin = "java")
 
-        java {
+        configure<JavaPluginExtension> {
             sourceCompatibility = JavaVersion.VERSION_17
             targetCompatibility = JavaVersion.VERSION_17
         }
 
+        val implementation by configurations
+        val annotationProcessor by configurations
         dependencies {
             implementation(platform(project(":jvm-stack-platform")))
             annotationProcessor(platform(project(":jvm-stack-platform")))

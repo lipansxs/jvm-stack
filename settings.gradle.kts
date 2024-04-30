@@ -8,6 +8,6 @@ include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-alibaba-con
 include("jvm-stack-framework:jvm-stack-springboot")
 include("jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-gateway")
 include("jvm-stack-framework:jvm-stack-spring-security")
-findProject(":jvm-stack-framework:jvm-stack-cloud-alibaba:jvm-stack-cloud-gateway")?.name = "jvm-stack-cloud-gateway"
 include("jvm-stack-framework:jvm-stack-mapstruct")
-findProject(":jvm-stack-framework:jvm-stack-mapstruct")?.name = "jvm-stack-mapstruct"
+include("jvm-stack-tools")
+include("jvm-stack-tools:jvm-stack-tools-jjwt")
